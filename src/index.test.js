@@ -1,9 +1,7 @@
-const dataGet = {
-    data: 'Full Cycle!'
-}
+const sum = require('./data')
 
-test("testing data is equal to Full Cycle", async () => {
-    global.fetch = jest.fn(() => Promise.resolve(dataGet))
-    expect(await global.fetch()).toEqual({ data: 'Full Cycle!' });
+test("testing sum 1 + 2 = 3", done => {
+    expect(sum(1, 2)).toEqual(3);
+    done();
 });
 
